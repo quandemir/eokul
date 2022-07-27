@@ -1,6 +1,6 @@
 # eokul
 MySql Workbench version 8.0.29 kurmalısın 
-      mysql workbence gir ve bir sorgu aç
+     -- mysql workbence gir ve bir sorgu aç
       
       // yeni database oluşturuyoruz
       create database eokul
