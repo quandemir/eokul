@@ -45,13 +45,34 @@ namespace eokul
                                 dr.Close();
                                 Console.Write("SINIF PUANINI GİRİNİZ;");
                                 int sınıfpuanı = Convert.ToInt32(Console.ReadLine());
+                                xcx:
                                 Console.Write("ÖĞRENCİ ADINI GİRİNİZ:");
                                 string ogr_ad = Console.ReadLine();
+                                if (String.IsNullOrEmpty(ogr_ad))
+                                {
+                                    Console.WriteLine("boş değer girdiniz");
+                                    Console.WriteLine("tekrar değer giriniz");
+                                    goto xcx;
+                                }
+                                xc:
                                 Console.Write("ÖĞRENCİ SOYADINI GİRİNİZ:");
                                 string ogr_soyad = Console.ReadLine();
+                                if (String.IsNullOrEmpty(ogr_soyad))
+                                {
+                                    Console.WriteLine("boş değer girdiniz");
+                                    Console.WriteLine("tekrar değer giriniz");
+                                    goto xc;
+                                }
+                                xcxx:
                                 Console.Write("SINIF ÖĞRETMENİNİN ADINI GİRİNİZ:");
                                 string ogrt_ad = Console.ReadLine();
-                                nm:
+                                if (String.IsNullOrEmpty(ogr_ad))
+                                {
+                                    Console.WriteLine("boş değer girdiniz");
+                                    Console.WriteLine("tekrar değer giriniz");
+                                    goto xcxx;
+                                }
+                            nm:
                                 Console.Write("ÖĞRENCİ NUMARASI GİRİNİZ(güncellemek istemiyorsanız enter a basın);");
                                 string ogr_noo = Console.ReadLine();
                                 if (String.IsNullOrEmpty(ogr_noo)) 

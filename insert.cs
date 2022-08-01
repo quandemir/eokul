@@ -19,7 +19,9 @@ namespace eokul
 
                 Console.Write("SINIF PUANINI GİRİNİZ;");
                 int sınıfpuanı = Convert.ToInt32(Console.ReadLine());
-                ccc:
+                Console.Write("ÖĞRENCİ NUMARASINI GİRİNİZ:");
+                int ogr_no = Convert.ToInt32(Console.ReadLine());
+            ccc:
                 Console.Write("SINIF ÖĞRETMENİNİN ADINI GİRİNİZ:");
                 string ogrt_ad = Console.ReadLine();
                 if (String.IsNullOrEmpty(ogrt_ad))
@@ -28,7 +30,7 @@ namespace eokul
                     Console.WriteLine("Hatalı bir veri girdiniz...");
                     Console.WriteLine("--------------------------");
                     Console.WriteLine("NE YAPMAK İSTİYORSUN");
-                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("1--VERİYİ TEKRAR GİRMEK");
                     Console.WriteLine("2--ÇIKIŞ YAPMAK");
                     Console.WriteLine("--------------------------");
                     string xx = Console.ReadLine();
@@ -40,8 +42,7 @@ namespace eokul
                         goto sonn;
                     }
                 }
-                Console.Write("ÖĞRENCİ NUMARASINI GİRİNİZ:");
-                int ogr_no = Convert.ToInt32(Console.ReadLine());
+                
                 vvv:
                 Console.Write("ÖĞRENCİ ADINI GİRİNİZ:");
                 string ogr_ad = Console.ReadLine();
@@ -51,7 +52,7 @@ namespace eokul
                     Console.WriteLine("Hatalı bir veri girdiniz...");
                     Console.WriteLine("--------------------------");
                     Console.WriteLine("NE YAPMAK İSTİYORSUN");
-                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("1--VERİYİ TEKRAR GİRMEK");
                     Console.WriteLine("2--ÇIKIŞ YAPMAK");
                     Console.WriteLine("--------------------------");
                     string xx = Console.ReadLine();
@@ -72,7 +73,7 @@ namespace eokul
                     Console.WriteLine("Hatalı bir veri girdiniz...");
                     Console.WriteLine("--------------------------");
                     Console.WriteLine("NE YAPMAK İSTİYORSUN");
-                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("1--VERİYİ TEKRAR GİRMEK");
                     Console.WriteLine("2--ÇIKIŞ YAPMAK");
                     Console.WriteLine("--------------------------");
                     string xx = Console.ReadLine();
