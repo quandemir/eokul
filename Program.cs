@@ -55,11 +55,13 @@ namespace eokul
                     Console.WriteLine("NE YAPMAK İSTİYORSUNUZ");
                     Console.WriteLine("11--tüm tabloyu görmek");
                     Console.WriteLine("12--tekrar öğrenci numarası girmek");
-                    Console.WriteLine("13--çıkış yapmak");
+                    Console.WriteLine("13--en başa dönmek");
+                    Console.WriteLine("14--çıkış yapmak");
                     string xnxx = Console.ReadLine();
                     if (xnxx == "11")
                     { see.fullgörme(); }
                     else if (xnxx == "12") { goto ttt; }
+                    else if(xnxx == "13") { goto hatay_durum; }
                     else
                     { Environment.Exit(0); }
                 }
@@ -74,7 +76,9 @@ namespace eokul
                 Console.WriteLine("========================================");
                 Console.WriteLine("31--TÜM BŞİLGİLERİ GÖRMEK İSTİYORUM");
                 Console.WriteLine("32--ÖZEL BİLGİYE GÖRE GÖRMEK İSTİYORUM ");
-                Console.WriteLine("33--ÇIKIŞ YAPMAK  İSTİYORUM ");
+                Console.WriteLine("33--EN BAŞA DÖNMEK İSTİYORUM ");
+                Console.WriteLine("34--ÇIKIŞ YAPMAK  İSTİYORUM ");
+                
                 Console.WriteLine("========================================");
                 string secim2 = Console.ReadLine();
                 Console.WriteLine("========================================");
@@ -272,7 +276,8 @@ namespace eokul
                     }
                     goto pıpı;
                 }
-                else if (secim2 == "33")
+                else if(secim2 == "33") { goto hatay_durum; }
+                else if (secim2 == "34")
                 {
                     Environment.Exit(0);
                 }

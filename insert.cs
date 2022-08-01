@@ -19,14 +19,71 @@ namespace eokul
 
                 Console.Write("SINIF PUANINI GİRİNİZ;");
                 int sınıfpuanı = Convert.ToInt32(Console.ReadLine());
+                ccc:
                 Console.Write("SINIF ÖĞRETMENİNİN ADINI GİRİNİZ:");
                 string ogrt_ad = Console.ReadLine();
+                if (String.IsNullOrEmpty(ogrt_ad))
+                {
+                sonn:
+                    Console.WriteLine("Hatalı bir veri girdiniz...");
+                    Console.WriteLine("--------------------------");
+                    Console.WriteLine("NE YAPMAK İSTİYORSUN");
+                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("2--ÇIKIŞ YAPMAK");
+                    Console.WriteLine("--------------------------");
+                    string xx = Console.ReadLine();
+                    if (xx == "1") { goto ccc; }
+                    else if (xx == "2") { Environment.Exit(0); }
+                    else
+                    {
+                        Console.WriteLine("Hatalı bir veri girdiniz...");
+                        goto sonn;
+                    }
+                }
                 Console.Write("ÖĞRENCİ NUMARASINI GİRİNİZ:");
                 int ogr_no = Convert.ToInt32(Console.ReadLine());
+                vvv:
                 Console.Write("ÖĞRENCİ ADINI GİRİNİZ:");
                 string ogr_ad = Console.ReadLine();
+                if (String.IsNullOrEmpty(ogr_ad)) 
+                {
+                sonn:
+                    Console.WriteLine("Hatalı bir veri girdiniz...");
+                    Console.WriteLine("--------------------------");
+                    Console.WriteLine("NE YAPMAK İSTİYORSUN");
+                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("2--ÇIKIŞ YAPMAK");
+                    Console.WriteLine("--------------------------");
+                    string xx = Console.ReadLine();
+                    if (xx == "1") { goto vvv; }
+                    else if (xx == "2") { Environment.Exit(0); }
+                    else
+                    {
+                        Console.WriteLine("Hatalı bir veri girdiniz...");
+                        goto sonn;
+                    }
+                }
+                bbb:
                 Console.Write("ÖĞRENCİ SOYADINI GİRİNİZ:");
                 string ogr_soyad = Console.ReadLine();
+                if (String.IsNullOrEmpty(ogr_soyad))
+                {
+                sonn:
+                    Console.WriteLine("Hatalı bir veri girdiniz...");
+                    Console.WriteLine("--------------------------");
+                    Console.WriteLine("NE YAPMAK İSTİYORSUN");
+                    Console.WriteLine("1--VERİLERİ TEKRAR GİRMEK");
+                    Console.WriteLine("2--ÇIKIŞ YAPMAK");
+                    Console.WriteLine("--------------------------");
+                    string xx = Console.ReadLine();
+                    if (xx == "1") { goto bbb; }
+                    else if (xx == "2") { Environment.Exit(0); }
+                    else
+                    {
+                        Console.WriteLine("Hatalı bir veri girdiniz...");
+                        goto sonn;
+                    }
+                }
                 
 
 

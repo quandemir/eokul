@@ -52,22 +52,30 @@ namespace eokul
                                 Console.Write("SINIF ÖĞRETMENİNİN ADINI GİRİNİZ:");
                                 string ogrt_ad = Console.ReadLine();
                                 nm:
-                                Console.Write("ÖĞRENCİ NUMARASI GİRİNİZ;");
-                                int ogr_noo = Convert.ToInt32(Console.ReadLine());
-                                
-                                string sql8 = "select ogr_no  from ogr_bilgileri where ogr_no=@p";
-                                MySqlCommand cmd8 = new MySqlCommand(sql8, conn);
-                                cmd8.Parameters.AddWithValue("@p", ogr_noo);
-                                MySqlDataReader dr8 = cmd8.ExecuteReader();
-                                if(dr8.Read() == true) 
+                                Console.Write("ÖĞRENCİ NUMARASI GİRİNİZ(güncellemek istemiyorsanız enter a basın);");
+                                string ogr_noo = Console.ReadLine();
+                                if (String.IsNullOrEmpty(ogr_noo)) 
                                 {
-                                    dr8.Close();
-                                    Console.WriteLine(ogr_noo + " numaralı öğrenci var");
-                                    Console.WriteLine("aynı numaralı öğrenci olamaz");
-                                    Console.WriteLine("tekrar öğrenci numarası giriniz");
-                                    goto nm;
+                                    ogr_noo = ogr_no;
                                 }
-                                dr8.Close();
+                                else
+                                {
+                                    string sql8 = "select ogr_no  from ogr_bilgileri where ogr_no=@p";
+                                    MySqlCommand cmd8 = new MySqlCommand(sql8, conn);
+                                    cmd8.Parameters.AddWithValue("@p", ogr_noo);
+                                    MySqlDataReader dr8 = cmd8.ExecuteReader();
+                                    if (dr8.Read() == true)
+                                    {
+                                        dr8.Close();
+                                        Console.WriteLine(ogr_noo + " numaralı öğrenci var");
+                                        Console.WriteLine("aynı numaralı öğrenci olamaz");
+                                        Console.WriteLine("tekrar öğrenci numarası giriniz");
+                                        goto nm;
+                                    }
+                                    dr8.Close();
+                                }
+                                                              
+                               
 
 
 
