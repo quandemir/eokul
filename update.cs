@@ -107,10 +107,7 @@ namespace eokul
                                 cmdd.Parameters.AddWithValue("@s", ogr_noo);
                                 cmdd.Parameters.AddWithValue("@t", ogr_no);
                                 MySqlDataReader drr = cmdd.ExecuteReader();
-                                while (drr.Read())
-                                {
-
-                                }
+                                while (drr.Read()) { }
                                 drr.Close();
                                 string sqlupp = "update eokul.sınıf set ogrt_ad=@f,sinifpuanı=@g,ogr_no=@h where ogr_no=@j";
                                 MySqlCommand cmddd = new MySqlCommand(sqlupp, conn);
@@ -119,10 +116,7 @@ namespace eokul
                                 cmddd.Parameters.AddWithValue("@h", ogr_noo);
                                 cmddd.Parameters.AddWithValue("@j", ogr_no);
                                 MySqlDataReader drrr = cmddd.ExecuteReader();
-                                while (drrr.Read())
-                                {
-
-                                }
+                                while (drrr.Read()) { }
                                 conn.Close();
                                 Console.WriteLine("VERİLER GÜNCELLENDİ");
 

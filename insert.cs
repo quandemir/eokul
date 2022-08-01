@@ -90,6 +90,7 @@ namespace eokul
 
                 try
                 {
+                    // tek yerden çagırt
                     MySqlConnection conn = new MySqlConnection("Server=localhost;Database=eokul;Uid=root;Pwd='Usmanım';");
                     conn.Open();
                     string sql = "INSERT INTO eokul.sınıf(ogrt_ad,sinifpuanı,ogr_no) values(@x,@y,@z)";
