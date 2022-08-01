@@ -65,7 +65,7 @@ namespace eokul
                                     cmd8.Parameters.AddWithValue("@p", ogr_noo);
                                     MySqlDataReader dr8 = cmd8.ExecuteReader();
                                     if (dr8.Read() == true)
-                                    {
+                                    { 
                                         dr8.Close();
                                         Console.WriteLine(ogr_noo + " numaralı öğrenci var");
                                         Console.WriteLine("aynı numaralı öğrenci olamaz");

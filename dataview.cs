@@ -16,7 +16,7 @@ namespace eokul
             try
             {
                 
-                Console.WriteLine("MySQL'e bağlanılıyor...");
+                Console.WriteLine("MySQL'e bağlanılıyor....");
                 conn.Open();
                 string sql = "select * from eokul.ogr_bilgileri ;";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
